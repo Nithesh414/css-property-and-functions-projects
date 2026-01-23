@@ -1,0 +1,158 @@
+<html>
+
+<head>
+<style>
+
+    body{
+
+background-image: url("images/download (2).jpg");
+background-repeat: no-repeat;
+width:1000px;
+height:500px;
+background-size: cover;
+overflow-y: hidden;
+overflow-x: hidden;
+    }
+    button{
+       
+        border-radius:50%;
+        border:2px solid black;
+        text-align: center;
+       width:50px;
+       height:50px;
+       background-color: transparent;
+    }
+    .button{
+        position: relative;
+        left:700px;
+        top:450px;
+
+    }
+    button:hover{
+        width:60px;
+        height:60px;
+        filter:blur(1px);
+    }
+
+    #container{
+        position:relative;
+         background: transparent; 
+  backdrop-filter: blur(10px); 
+  top:200px;
+          
+
+  border-radius: 16px;
+  border: 1px solid white;
+
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  width:800px;
+  height:150px;
+padding:10px 20px 20px 30px;
+
+    }
+#container p{
+    
+    font-style: italic;
+    font-size: 15px;
+}
+   
+</style>
+
+
+</head>
+<body id="body">
+
+<div id="container">
+
+     <h1 id="text">
+Movie Name : I Want to Eat Your Pancreas
+     </h1>
+     <p id="desp">
+ I Want to Eat Your Pancreas is a Japanese coming-of-age story about an aloof high school boy who discovers his cheerful, popular classmate, Sakura Yamauchi, have a terminal pancreatic illness and only months to live, leading to an unexpected friendship as they share her secret and she lives out her final days
+     </p>
+</div>
+
+
+
+<div class="button">
+<button id="button1">
+    <
+</button>
+<button id="button2">
+    >
+</button >
+
+</div>
+
+</body>
+<script>
+
+const body=document.getElementById('body');
+const text=document.getElementById('text');
+const desp=document.getElementById('desp');
+const button1=document.getElementById('button1');
+const button2=document.getElementById('button2');
+
+const arr=[
+
+{
+  id: 0,
+  images: "images/download (2).jpg",
+  text: "Movie Name : I Want to Eat Your Pancreas",
+  desp: "I Want to Eat Your Pancreas is a Japanese coming-of-age anime film about a quiet high school boy who discovers that his cheerful classmate, Sakura Yamauchi, is suffering from a terminal pancreatic illness. As he keeps her secret, they form a deep emotional bond, exploring themes of love, mortality, and the value of living life fully."
+},
+{
+  id: 1,
+  images: "images/Suzume.jpg",
+  text: "Movie Name : Suzume",
+  desp: "Suzume is a visually stunning anime fantasy film by Makoto Shinkai that follows a 17-year-old girl who helps a mysterious young man close magical doors causing disasters across Japan. The story blends adventure, emotional healing, and themes of loss, memory, and resilience."
+},
+{
+  id: 2,
+  images: "images/your nname1.jpg",
+  text: "Movie Name : Your Name (Kimi no Na wa)",
+  desp: "Your Name is a romantic fantasy anime film directed by Makoto Shinkai about two teenagers who mysteriously begin swapping bodies. As they try to understand their connection across time and space, the film explores fate, love, and the power of human connection."
+},
+{
+  id: 3,
+  images: "images/A silent voice.jpg",
+  text: "Movie Name : A Silent Voice (Koe no Katachi)",
+  desp: "A Silent Voice is an emotional anime drama that follows a former bully seeking redemption after tormenting a deaf girl during childhood. The film deals with themes of guilt, forgiveness, mental health, and the importance of empathy and communication."
+},
+{
+  id: 4,
+  images: "images/weather1.jpg",
+  text: "Movie Name : Weathering With You",
+  desp: "Weathering With You is a romantic fantasy anime film set in Tokyo, where a runaway boy meets a girl who has the supernatural ability to control the weather. The movie explores love, sacrifice, and the consequences of altering nature for personal happiness."
+}
+
+]
+let count=0;
+console.log(arr.length)
+button2.addEventListener('click',()=>{
+    if(count===arr.length-1){
+ count=0;
+    }
+    else{
+        count++
+    }  
+     body.style.backgroundImage = `url("${arr[count].images}")`;
+     text.textContent=arr[count].text
+     desp.innerText=arr[count].desp
+})
+button1.addEventListener('click',()=>{
+    if(count==0){
+ count=arr.length-1;
+    }
+    else{
+       count--;
+    } 
+     body.style.backgroundImage = `url("${arr[count].images}")`;
+     text.textContent=arr[count].text
+     desp.innerText=arr[count].desp
+})
+
+</script>
+</html>
