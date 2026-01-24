@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>
+            hover card
+        </title>
+        <style>
+        body{
+            height: 3000px;
+
+        }
+
+        nav{
+            display: flex;
+            position: sticky;
+            top:0;
+            align-items: center;
+            background-color: black;
+            color:white;
+            min-height: 45px;
+            max-height: 45px;
+            width: 100%;
+        }
+        .uw{
+            display: flex;
+            position: relative;
+            list-style: none;
+            width:auto;
+            gap:40px;
+            left:800px;
+        }
+        .uw li{ padding: 10px 12px;
+
+        }
+        .drop{
+            position: relative;
+    cursor: pointer;
+        }
+        .dropp{
+            display: none;
+            position: absolute;
+            background-color:black;
+            list-style: none;
+            padding: 10px;
+            top:40px;
+        }
+        .dropp li{
+            height:30px;
+            width:auto;
+            text-align: center;
+        }
+        .drop:hover .dropp{
+            display:block;
+        }
+        .dropp li:hover{
+    background-color: orange;
+    backdrop-filter: blur(10px);
+}
+h2{
+    display: block;
+    width:auto;
+    margin-left: 30px;
+}
+div{
+    position: relative;
+    top:300px;
+    left:600px;
+    width:300px;
+    height:300px;
+}
+        </style>
+     
+
+    </head>
+    <body>
+<nav>
+    <h2>NEW SHOP</h2>
+    <ul class="uw">
+        <li>HOME</li>
+        <li>SEARCH</li>
+        <li class="drop">CATEGORY
+           <ul class="dropp">
+                <li>ELECTRICALS</li>
+                <li>TOYS</li>
+                <li>COSMETICS</li>
+            </ul>
+        </li>
+        <li>PROFILE</li>
+    </ul>
+</nav>
+<div>
+    <h4>WELCOME</h4>
+    <h4>
+    SCROLL TO VIEW THE STICKY PROERTY..
+ </h4>
+</div>
+ 
+
+
+    </body>
+</html>
