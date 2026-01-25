@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+            center a box
+        </title>
+        <style>
+            .contain{
+                display: flex;
+                flex-direction: row;
+                width:99vw;
+                height:100vh;
+                gap:30px;
+                justify-content: center;
+                align-items: center;
+            }
+            .box{
+                width:20vw;
+                height:20vh;
+                background-color: beige;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contain">
+        <div class="box">
+            box1
+        </div>
+        <div class="box">
+            box2
+        </div>
+        <div class="box">
+            box3
+        </div>
+        </div>
+    </body>
+</html>
