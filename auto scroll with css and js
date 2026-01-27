@@ -1,0 +1,145 @@
+<html>
+
+<head>
+<style>
+
+    body{
+
+background-image: url("images/your nname1.jpg");
+background-repeat: no-repeat;
+width:1000px;
+height:500px;
+background-size: cover;
+overflow-y: hidden;
+overflow-x: hidden;
+animation-duration: 0s;
+animation-name:text;
+animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    }
+
+    #container{
+        position:relative;
+         background: transparent; 
+  backdrop-filter: blur(10px); 
+  top:400px;
+          left:340px;
+
+  border-radius: 16px;
+  border: 1px solid white;
+
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  width:800px;
+  height:150px;
+padding:10px 20px 20px 30px;
+animation-duration: 3s;
+animation-name:text;
+animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    }
+#container p{
+    
+    font-style: italic;
+    font-size: 15px;
+  
+}
+#desp{
+    animation-duration:3s;
+  animation-name:text;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+#text{
+    animation-duration:3s;
+    animation-name: text;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+@keyframes text{
+    0%{
+        opacity: 0.0;
+    }
+    100%{
+        opacity: 1.0;
+    }
+}
+   
+</style>
+
+
+</head>
+<body id="body">
+
+<div id="container">
+
+     <h1 id="text">
+Movie Name : Your Name (Kimi no Na wa)
+     </h1>
+     <p id="desp">
+Your Name is a romantic fantasy anime film directed by Makoto Shinkai about two teenagers who mysteriously begin swapping bodies. As they try to understand their connection across time and space, the film explores fate, love, and the power of human connection.  </p>
+</div>
+
+
+</body>
+<script>
+
+const body=document.getElementById('body');
+const text=document.getElementById('text');
+const desp=document.getElementById('desp');
+
+const arr=[
+{
+  id: 2,
+  images: "C:/Users/Nithesh/New folder (7)/images/your nname1.jpg",
+  text: "Movie Name : Your Name (Kimi no Na wa)",
+  desp: "Your Name is a romantic fantasy anime film directed by Makoto Shinkai about two teenagers who mysteriously begin swapping bodies. As they try to understand their connection across time and space, the film explores fate, love, and the power of human connection."
+},
+
+{
+  id: 1,
+  images: "images/Phone.jpg",
+  text: "Movie Name : Suzume",
+  desp: "Suzume is a visually stunning anime fantasy film by Makoto Shinkai that follows a 17-year-old girl who helps a mysterious young man close magical doors causing disasters across Japan. The story blends adventure, emotional healing, and themes of loss, memory, and resilience."
+},
+
+{
+  id: 3,
+  images: "images/A silent voice.jpg",
+  text: "Movie Name : A Silent Voice (Koe no Katachi)",
+  desp: "A Silent Voice is an emotional anime drama that follows a former bully seeking redemption after tormenting a deaf girl during childhood. The film deals with themes of guilt, forgiveness, mental health, and the importance of empathy and communication."
+},
+{
+  id: 4,
+  images: "images/weather1.jpg",
+  text: "Movie Name : Weathering With You",
+  desp: "Weathering With You is a romantic fantasy anime film set in Tokyo, where a runaway boy meets a girl who has the supernatural ability to control the weather. The movie explores love, sacrifice, and the consequences of altering nature for personal happiness."
+},{
+  id: 0,
+  images: "C:/Users/Nithesh/New folder (7)/images/download (4).jpg",
+  text: "Movie Name : I Want to Eat Your Pancreass",
+  desp: "I Want to Eat Your Pancreas is a Japanese coming-of-age anime film about a quiet high school boy who discovers that his cheerful classmate, Sakura Yamauchi, is suffering from a terminal pancreatic illness. As he keeps her secret, they form a deep emotional bond, exploring themes of love, mortality, and the value of living life fully."
+}
+
+]
+let count=0;
+console.log(arr.length)
+
+setInterval(()=>{
+if(count===arr.length-1){
+ count=0;
+    }
+    else{
+        count++
+    } 
+    body.style.backgroundImage = `url("${arr[count].images}")`;
+     text.textContent=arr[count].text
+     desp.innerText=arr[count].desp
+
+
+},3000)
+
+
+</script>
+</html>
