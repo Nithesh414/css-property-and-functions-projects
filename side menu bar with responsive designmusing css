@@ -1,0 +1,59 @@
+<html>
+    <head>
+<style>
+   .navbar{
+    position: relative;
+    width:200px;
+    height:100%;
+background: linear-gradient(white 10%,black);
+   }
+   .cate{
+    position: relative;
+    list-style: none;
+    padding-top: 80px;;
+   }
+   .cate img{
+    width:20px;
+    height:20px;
+   }
+   .cat{
+    position: absolute;
+    width:40px;
+    height:40px;
+    right:0;
+    top:10px;
+   }
+   h3{
+    position: absolute;
+    top:10px;
+    left:0;
+   }
+</style>
+
+    </head>
+    <body>
+       <div class="navbar">
+        <h3>NEW SHOP</h3>
+        <input type="checkbox" for="cat"id="cat"><img src="C:\Users\Nithesh\weat\images\cate.png" class="cat">
+        
+        <ul class="cate">
+            <li>
+                <img src="C:\Users\Nithesh\weat\images\home.png" alt="">
+                HOME
+            </li>
+            <li>
+                <img src="C:\Users\Nithesh\weat\images\search.png" alt="">
+                SEARCH
+            </li>
+            <li>
+                <img src="C:\Users\Nithesh\weat\images\cart.png" alt="">
+                CART
+            </li>
+            <li>
+                <img src="C:\Users\Nithesh\weat\images\profile.png" alt="">
+                PROFILE
+            </li>
+        </ul>
+       </div>
+    </body>
+</html>
