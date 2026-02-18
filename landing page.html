@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Landing Page</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    color:#333;
+}
+
+/* HERO SECTION */
+.hero{
+    height:100vh;
+    background: linear-gradient(135deg,#4e73df,#1cc88a);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    padding:12px 30px;
+    background:white;
+    color:#4e73df;
+    border:none;
+    border-radius:25px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#333;
+    color:white;
+}
+
+/* FEATURES */
+.features{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.features h2{
+    margin-bottom:40px;
+    font-size:2rem;
+}
+
+.feature-box{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    width:250px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* PRICING */
+.pricing{
+    background:#e9ecef;
+    padding:60px 20px;
+    text-align:center;
+}
+
+.pricing h2{
+    margin-bottom:40px;
+}
+
+.price-box{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.price-card{
+    background:white;
+    padding:30px;
+    width:250px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.price-card h3{
+    margin-bottom:15px;
+}
+
+.price{
+    font-size:2rem;
+    margin:15px 0;
+    color:#1cc88a;
+}
+
+.footer-cta{
+    text-align:center;
+    padding:40px;
+}
+
+.footer-cta button{
+    padding:15px 40px;
+    font-size:1rem;
+    background:#4e73df;
+    color:white;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.footer-cta button:hover{
+    background:#1cc88a;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .hero h1{
+        font-size:2rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h1>Amazing Product</h1>
+        <p>Make your life easier with our smart solution.</p>
+        <button class="btn">Get Started</button>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+    <h2>Our Features</h2>
+    <div class="feature-box">
+        <div class="card">
+            <h3>Fast</h3>
+            <p>Lightning fast performance for better productivity.</p>
+        </div>
+        <div class="card">
+            <h3>Secure</h3>
+            <p>Top level security to protect your data.</p>
+        </div>
+        <div class="card">
+            <h3>Easy</h3>
+            <p>User friendly interface for smooth experience.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+    <h2>Pricing Plans</h2>
+    <div class="price-box">
+        <div class="price-card">
+            <h3>Basic</h3>
+            <p class="price">$9/month</p>
+            <p>Essential features</p>
+            <button class="btn">Choose</button>
+        </div>
+        <div class="price-card">
+            <h3>Pro</h3>
+            <p class="price">$19/month</p>
+            <p>Advanced features</p>
+            <button class="btn">Choose</button>
+        </div>
+        <div class="price-card">
+            <h3>Premium</h3>
+            <p class="price">$29/month</p>
+            <p>All features included</p>
+            <button class="btn">Choose</button>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>
