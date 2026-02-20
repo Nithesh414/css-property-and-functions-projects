@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>
+    clock
+</title>
+</head>
+<body>
+<div  style="height:100%;display: flex; gap: 30px;justify-content: center;align-items:center;"> <p id="hour">00</p><p id="min">00</p><p id="sec"></p> </div>
+
+
+
+</body>
+<script>
+let hour = document.getElementById('hour');
+let min = document.getElementById('min');
+let sec = document.getElementById('sec');
+
+let secvalue=50;
+let minvalue=0;
+setInterval(()=>{
+if(secvalue <= 59){
+    sec.innerHTML=`<h3>${secvalue}</h3>`;
+    secvalue++;
+    if(secvalue == 59){ 
+if(min <=59){
+    min.innerHTML=`<h3>${min}</h3>`
+    minvalue++;
+}
+else{
+    minvalue=0;
+}
+
+}
+    }
+else{
+    secvalue=0;
+} 
+
+
+
+
+},1000);
+console.log(secvalue);
+
+
+
+
+
+</script>
+</html>
