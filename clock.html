@@ -54,7 +54,45 @@ align-items: center;gap:10px;
     </body>
     <script>
 
+let minp=document.getElementById('min');
+let hourp=document.getElementById('hour');
+let secp=document.getElementById('sec');
+let sessionp=document.getElementById('session');
 
+
+let sec = 50;
+let min = 59;
+let hour = 11;
+let session = "pm";
+
+setInterval(() => {
+
+    sec++;
+
+    if (sec == 60) {
+        sec = 0;
+        min++;
+
+        if (min == 60) {
+            min = 0;
+            hour++;
+
+            if (hour == 12) {
+                session = (session === "am") ? "pm" : "am";
+            }
+
+            if (hour > 12) {
+                hour = 1;
+            }
+        }
+    }
+
+    sessionp.innerText = session;
+    secp.innerText = sec;
+    minp.innerText = min;
+    hourp.innerText = hour;
+
+}, 1000);
         
     </script>
 </html>
