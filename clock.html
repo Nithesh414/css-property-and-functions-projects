@@ -1,50 +1,60 @@
 <html>
-<head>
-<title>
-    clock
-</title>
-</head>
-<body>
-<div  style="height:100%;display: flex; gap: 30px;justify-content: center;align-items:center;"> <p id="hour">00</p><p id="min">00</p><p id="sec"></p> </div>
+    <head><title>
+        clock
+    </title></head>
 
 
-
-</body>
-<script>
-let hour = document.getElementById('hour');
-let min = document.getElementById('min');
-let sec = document.getElementById('sec');
-
-let secvalue=50;
-let minvalue=0;
-setInterval(()=>{
-if(secvalue <= 59){
-    sec.innerHTML=`<h3>${secvalue}</h3>`;
-    secvalue++;
+    <style>
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     
-
 }
-    }
-else{
-    secvalue=0;
-} 
-if(secvalue == 59){ 
-if(min <=59){
-    min.innerHTML=`<h3>${min}</h3>`
-    minvalue++;
+.divcon{
+
+   
+display: flex;
+
+justify-content: space-around;
+align-items: center;gap:10px;
+ width:600px;
+    height: 300px;
+    background:linear-gradient(85deg,  black,grey);
+
+    border: 2px solid bisque;
 }
-else{
-    minvalue=0;
+
+.divcon p{
+    text-align: center;
+    color: orange;
+    font-weight: bold;
+    font-size: 40px;
+    border: 1px solid bisque;
+    width:60px;
+    height: 50px;
 }
+</style>
+    <body>
 
 
 
-},1000);
-console.log(secvalue);
+        <div  class="divcon"  id="divcon">
+
+            <p  id="hour">0</p>
+            <p id="min">0</p>
+            <p id="sec">0</p>
+            <p id="session">am</p>
+
+        </div>
 
 
 
+    </body>
+    <script>
 
 
-</script>
+        
+    </script>
 </html>
