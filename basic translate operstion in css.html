@@ -4,7 +4,64 @@
     <title>
         newspaper
     </title>
+    <style>
+/* Hide checkbox */
+#modal-toggle{
+    display: none;
+}
 
+/* Open button */
+.open-btn{
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+/* Overlay */
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 10;
+}
+
+/* Modal box */
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    z-index: 11;
+    width: 300px;
+    text-align: center;
+}
+
+/* Show modal when checkbox checked */
+#modal-toggle:checked ~ .overlay{
+    display: block;
+}
+
+/* Close button */
+.close-btn{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 15px;
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+
+
+    </style>
+    
 </head>
 
 <body>
