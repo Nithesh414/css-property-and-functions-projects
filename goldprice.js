@@ -7,7 +7,7 @@ async function getdata() {
 
 try{
  loadingtext.style.display="block";
-   const res=await fetch("")
+   const res=await fetch("https://api.gold-api.com/price/XAU")
     const data= await res.json()
 loadingtext.style.display="none";
 }
